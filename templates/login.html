@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no" />
+<title>Maidenful Selenium Testing</title>
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="style_login.css">
+
+<script type="text/javascript" src="speedtest.js"></script>
+
+</head>
+<body>
+    <form id="form" method="post">     
+        <p style="font-size: xx-large; text-align: center;font-family: Arial, Helvetica, sans-serif; color: #2b2a5b;"><strong>Log In</strong></p>
+        <div class= "container">
+            <div class = "Names">
+                <div class="column">
+                    <label class="text_form" for="uname"> Username</label>
+                    <input type="text" placeholder="Enter Username" name="username" value="{{request.form.username }}" required>
+                    <label for="psw">Password</label>
+                    <input class="text_form" type="password" placeholder="Enter Password" name="password" value="{{request.form.password }}" required>
+                    <button type="submit">Log in</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    {% if message %}
+    <p name="message" class="message"><strong> {{ message }} </strong>
+    {% endif %}
+</body>
+</html>
